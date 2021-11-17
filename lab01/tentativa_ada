@@ -1,0 +1,29 @@
+with Ada.Text_IO; use Ada.Text_IO;
+
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+
+procedure Jumpfrog is
+  name : String := Ada.Text_IO.Get_Line;
+  line2 : String := Ada.Text_IO.Get_Line;
+  line3 : String := Ada.Text_IO.Get_Line;
+  Temp_Unbouded_String : Unbounded_String;
+  
+begin
+  begin
+    Append(Temp_Unbouded_String, "You win!");
+    Append(Temp_Unbouded_String, name);
+    
+	  Put_Line("You win!");
+	  Put_Line(To_String(Temp_Unbouded_String));
+	  Put_Line(line2);
+	 end;
+	 
+	 begin
+    Append(Temp_Unbouded_String, "Game Over");
+    Append(Temp_Unbouded_String, name);
+    
+	  Put_Line("Game Over");
+	  Put_Line(To_String(Temp_Unbouded_String));
+	  Put_Line(line3);
+	 end;
+end Jumpfrog;
